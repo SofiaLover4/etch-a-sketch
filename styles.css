@@ -4,5 +4,6 @@ body * {
 
 .grid {
    display: flex;
+   flex-wrap: wrap;
    max-width: 800px;
 }
