@@ -29,8 +29,8 @@ function loadGrid () {
    for (i = 0; i < gridSize; i++){
       boxes[i] = document.createElement('div');
       boxes[i].classList.add('box');
-      boxes[i].style.height = boxSize.toString() + "px";
-      boxes[i].style.width  = boxSize.toString() + "px";
+      boxes[i].style.height = `${boxSize}px`;
+      boxes[i].style.width  = `${boxSize}px`;
       grid.appendChild(boxes[i]);
       boxes[i].addEventListener('mouseover', function (e) {
          e.target.style.backgroundColor = `rgb(${RandomRGBvalue()},${RandomRGBvalue()},${RandomRGBvalue()})`;
