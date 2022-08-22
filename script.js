@@ -10,9 +10,6 @@ gridSizeBtn.addEventListener('click',loadNewGrid);
 
 loadGrid();
 
-function colors () {
-   boxes[i].style.backgroundColor = 'blue';
-}
 
 function loadNewGrid () {
    getgridSize();
@@ -26,6 +23,7 @@ function loadNewGrid () {
       loadGrid();
    }
 }
+
 function loadGrid () {
    for (i = 0; i < gridSize; i++){
       boxes[i] = document.createElement('div');
