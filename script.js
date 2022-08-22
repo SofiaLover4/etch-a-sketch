@@ -16,11 +16,15 @@ function colors () {
 
 function loadNewGrid () {
    getgridSize();
-   let oldBoxes = document.querySelectorAll('.box');
-   oldBoxes.forEach(thing => {
-      grid.removeChild(thing);
-   });
-   loadGrid();
+   if (gridNum === null || isNaN(gridNum) === true) {
+      return;
+   } else {
+      let oldBoxes = document.querySelectorAll('.box');
+      oldBoxes.forEach(thing => {
+         grid.removeChild(thing);
+      });
+      loadGrid();
+   }
 }
 function loadGrid () {
    for (i = 0; i < gridSize; i++){
@@ -40,7 +44,7 @@ function getgridSize (){
    if (isNaN(gridNum) === true) {
       alert("This is not a number! Try again!")
    } else if (gridNum === null) {
-      return;
+      return false;
    } else if (gridNum > 100) {
       alert("Sorry this number is too big!");
    } else {
