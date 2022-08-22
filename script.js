@@ -37,10 +37,17 @@ function loadGrid () {
 
 function getgridSize (){
    gridNum = prompt("How big would you like your grid? \(Enter how many squares you would like per side\)");
-   gridSize = gridNum * gridNum;
-   boxSize = Math.round(Math.sqrt(490000 / (gridNum * gridNum)) * 1000) / 1000; 
+   if (isNaN(gridNum) === true) {
+      alert("This is not a number! Try again!")
+   } else if (gridNum === null) {
+      return;
+   } else if (gridNum > 100) {
+      alert("Sorry this number is too big!");
+   } else {
+      gridSize = gridNum * gridNum;
+      boxSize = Math.round(Math.sqrt(490000 / (gridNum * gridNum)) * 1000) / 1000;
+   }
 }
-
 
 
 
