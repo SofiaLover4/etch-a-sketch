@@ -34,7 +34,7 @@ function loadGrid () {
       grid.appendChild(boxes[i]);
       boxes[i].addEventListener('mouseover', function (e) {
          e.target.style.backgroundColor = `rgb(${RandomRGBvalue()},${RandomRGBvalue()},${RandomRGBvalue()})`;
-   }, {once : true});
+      }, {once : true});
    }
 }
 
