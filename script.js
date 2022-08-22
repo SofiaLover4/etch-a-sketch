@@ -2,6 +2,7 @@ let boxes = [];
 let gridSize = 256;
 let gridNum = 16;
 let boxSize = 43.75;
+let rgbValue = 0;
 
 const grid = document.querySelector('.grid');
 const gridSizeBtn = document.querySelector('.question');
@@ -32,8 +33,8 @@ function loadGrid () {
       boxes[i].style.width  = boxSize.toString() + "px";
       grid.appendChild(boxes[i]);
       boxes[i].addEventListener('mouseover', function (e) {
-         e.target.style.backgroundColor = 'blue';
-      });
+         e.target.style.backgroundColor = `rgb(${RandomRGBvalue()},${RandomRGBvalue()},${RandomRGBvalue()})`;
+   }, {once : true});
    }
 }
 
@@ -50,6 +51,10 @@ function getgridSize (){
       boxSize = Math.round(Math.sqrt(490000 / (gridNum * gridNum)) * 1000) / 1000;
    }
 }
+
+function RandomRGBvalue () {
+   return rgbValue = Math.floor(Math.random() * 254) + 1;
+} 
 
 
 
