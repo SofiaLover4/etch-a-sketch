@@ -2,8 +2,6 @@ let boxes = [];
 let gridSize = 256;
 let gridNum = 16;
 let boxSize = 43.75;
-let rgbValue = 0;
-let randColor = false;
 
 const grid = document.querySelector('.grid');
 const gridSizeBtn = document.querySelector('.question');
@@ -16,8 +14,31 @@ resetBtn.addEventListener('click', () =>{
    let oldBoxes = document.querySelectorAll('.box');
    oldBoxes.forEach(box => {
       box.style.backgroundColor = "white";
+      box.style.borderColor = "black";
       box.addEventListener('mouseover', function (e) {
          e.target.style.backgroundColor = 'black';
+         e.target.style.borderColor = 'black';
+      }, {once : true});
+   });
+});
+
+blackBtn.addEventListener('click', () => {
+   let boxes = document.querySelectorAll('.box');
+   boxes.forEach( box => {
+      box.addEventListener('mouseover', function (e) {
+         e.target.style.backgroundColor = 'black';
+         e.target.style.borderColor = 'black'
+      }, {once : true});
+   });
+});
+
+rainbowBtn.addEventListener('click', () => {
+   let boxes = document.querySelectorAll('.box');
+   boxes.forEach( box => {
+      box.addEventListener('mouseover', function (e) {
+         randValue =  `rgb(${RandomRGBvalue()},${RandomRGBvalue()},${RandomRGBvalue()})`;
+         e.target.style.backgroundColor = randValue;
+         e.target.style.borderColor = randValue;
       }, {once : true});
    });
 });
@@ -47,6 +68,7 @@ function loadGrid () {
       grid.appendChild(boxes[i]);
       boxes[i].addEventListener('mouseover', function (e) {
          e.target.style.backgroundColor = 'black';
+         e.target.style.borderColor = 'black';
       }, {once : true});
    }
 }
