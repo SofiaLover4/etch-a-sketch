@@ -8,6 +8,8 @@ let color = "black";
 const grid = document.querySelector('.grid');
 const gridSizeBtn = document.querySelector('.question');
 const resetBtn = document.querySelector('.reset');
+const blackBtn = document.querySelector('.black');
+const rainbowBtn = document.querySelector('.rainbow');
 
 gridSizeBtn.addEventListener('click',loadNewGrid);
 resetBtn.addEventListener('click', () =>{
