@@ -6,8 +6,15 @@ let rgbValue = 0;
 
 const grid = document.querySelector('.grid');
 const gridSizeBtn = document.querySelector('.question');
+const resetBtn = document.querySelector('.reset');
 
 gridSizeBtn.addEventListener('click',loadNewGrid);
+resetBtn.addEventListener('click', () =>{
+   let oldBoxes = document.querySelectorAll('.box');
+   oldBoxes.forEach(box => {
+      box.style.backgroundColor = "white";
+   });
+});
 
 loadGrid();
 
