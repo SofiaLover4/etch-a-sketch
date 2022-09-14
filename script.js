@@ -3,7 +3,7 @@ let gridSize = 256;
 let gridNum = 16;
 let boxSize = 43.75;
 let rgbValue = 0;
-let color = "black";
+let randColor = false;
 
 const grid = document.querySelector('.grid');
 const gridSizeBtn = document.querySelector('.question');
@@ -16,6 +16,9 @@ resetBtn.addEventListener('click', () =>{
    let oldBoxes = document.querySelectorAll('.box');
    oldBoxes.forEach(box => {
       box.style.backgroundColor = "white";
+      box.addEventListener('mouseover', function (e) {
+         e.target.style.backgroundColor = 'black';
+      }, {once : true});
    });
 });
 
@@ -43,7 +46,7 @@ function loadGrid () {
       boxes[i].style.width  = `${boxSize}px`;
       grid.appendChild(boxes[i]);
       boxes[i].addEventListener('mouseover', function (e) {
-         e.target.style.backgroundColor = color;
+         e.target.style.backgroundColor = 'black';
       }, {once : true});
    }
 }
