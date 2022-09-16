@@ -6,6 +6,19 @@ body {
    background-color: rgb(79, 79, 90);
 }
 
+::-webkit-scrollbar {
+   width: 10px;
+}
+
+ ::-webkit-scrollbar-track {
+   background: black;
+ }
+
+ ::-webkit-scrollbar-thumb {
+   background: #888; 
+   border-radius: 20px;
+ }
+
 button {
    height: 60px;
    width: fit-content;
