@@ -65,6 +65,7 @@ function loadGrid () {
       boxes[i].classList.add('box');
       boxes[i].style.height = `${boxSize}px`;
       boxes[i].style.width  = `${boxSize}px`;
+      boxes[i].style.backgroundColor = 'white';
       grid.appendChild(boxes[i]);
       boxes[i].addEventListener('mouseover', function (e) {
          e.target.style.backgroundColor = 'black';

@@ -2,6 +2,10 @@ body * {
    box-sizing: border-box;
 }
 
+body {
+   background-color: rgb(79, 79, 90);
+}
+
 button {
    height: 60px;
    width: fit-content;
